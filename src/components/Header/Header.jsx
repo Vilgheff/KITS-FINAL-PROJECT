@@ -9,7 +9,7 @@ const HeaderStyled = styled.div`
   position: fixed;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: #F0F0F0;
   width: 100%;

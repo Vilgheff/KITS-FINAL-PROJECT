@@ -1,19 +1,17 @@
 import styled from "styled-components";
-import ShowCaseImg from "../../assets/image-category-1.svg";
 const StyleShowCase = styled.div`
+  position: relative;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  background-image: url(${(props) => props.imgSrc});
-  background-repeat: no-repeat;
-  background-size: ${(props) => props.bgSize};
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: center;
   .sale,
   .hot {
+    position: absolute;
     color: white;
-    width: 10%;
+    width: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +20,18 @@ const StyleShowCase = styled.div`
   }
   .sale {
     background-color: black;
+    top: ${(props) => (!props.isHot ? "0px" : "5%")};
   }
   .hot {
     background-color: #ff6f61;
+    top: ${(props) => (!props.isSale ? "0px" : "10%")};
+  }
+  img {
+    display: block;
+    max-width: 648px;
+    max-height: 648px;
+    width: auto;
+    height: auto;
   }
 `;
 export const ShowCase = ({
@@ -44,10 +51,11 @@ export const ShowCase = ({
       height={height}
       isHot={isHot}
       isSale={isSale}
-      bgSize = {bgSize}
+      bgSize={bgSize}
     >
-      {isHot && <span className="hot">Hot</span>}
-      {isSale && <span className="sale">Sale</span>}
+      <img src={imgSrc} alt="" />
+      {isHot && <div className="hot">Hot</div>}
+      {isSale && <div className="sale">Sale</div>}
     </StyleShowCase>
   );
 };

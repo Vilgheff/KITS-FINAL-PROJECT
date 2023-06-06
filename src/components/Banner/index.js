@@ -1,2 +1,3 @@
 import { Banner } from "./Banner";
-export { Banner };
+import { SeacondBanner } from "./SeacondBanner";
+export { Banner, SeacondBanner };

@@ -45,7 +45,7 @@ export const Button = ({
       marginright={marginright}
       {...rest}
     >
-      <img src={icon}></img>
+      <img src={icon} alt=""/>
       {children}
     </StyledButton>
   );

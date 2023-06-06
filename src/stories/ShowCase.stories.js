@@ -5,4 +5,4 @@ export default {
   component: ShowCase,
   tags: ["autodocs"],
 };
-export const ShowCaseTest = () => <ShowCase imgSrc={ShowCaseImg} width="648px" height="648px" isHot={true} isSale={true}></ShowCase>
+export const ShowCaseTest = () => <ShowCase imgSrc={ShowCaseImg} width="auto" height="648px" isHot={true} isSale={true}></ShowCase>
