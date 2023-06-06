@@ -7,6 +7,7 @@ const LayoutStyled = styled.div`
   background: #ffffff;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 `;
 const Contents = styled.div`
   width: 100%;
