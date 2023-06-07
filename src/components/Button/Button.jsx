@@ -1,11 +1,12 @@
 import styled from "styled-components";
 const StyledButton = styled.button`
+  
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   border: ${(props) =>
     props.boderColor ? `1px solid ${props.boderColor}` : "none"};
   border-radius: ${(props) => props.borderRadius};
-  background: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgColor};
   font-weight: 500;
   line-height: 21px;
   margin-right: ${(props) => props.marginright};
@@ -18,12 +19,19 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  :hover{
+    background-color: ${(props)=>props.bgColor !== "transparent" ? `#FF6F61` : props.bgColor };
+    color: ${(props)=>props.bgColor === "transparent" ? `#FF6F61` : props.textColor }
+  }
 `;
 export const Button = ({
   width,
   height,
   textColor,
+  textColorHover,
   bgColor,
+  bgColorHover,
   borderRadius,
   boderColor,
   fontSize,
@@ -37,24 +45,21 @@ export const Button = ({
       width={width}
       height={height}
       textColor={textColor}
+      textColorHover={textColorHover}
       bgColor={bgColor}
+      bgColorHover={bgColorHover}
       boderColor={boderColor}
       borderRadius={borderRadius}
       fontSize={fontSize}
       icon={icon}
       marginright={marginright}
-      {...rest}
+      onClick={console.log("onclick")}
     >
-      <img src={icon} alt=""/>
+      <img src={icon} alt="" />
       {children}
     </StyledButton>
   );
 };
 Button.defaultProps = {
-  bgColor: "#FFFFFF",
-  textColor: "#5429FF",
-  width: "128px",
-  height: "46px",
-  borderRadius: "40px",
-  fontSize: 16,
+  bgColor: "transparent"
 };

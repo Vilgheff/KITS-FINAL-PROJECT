@@ -12,6 +12,9 @@ const StyledBanner = styled.div`
   background-image: url(${backgroundBanner});
   gap: 55px;
   display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
   .zaralogo1 {
     display: block;
     position: absolute;
@@ -26,6 +29,9 @@ const StyledBanner = styled.div`
     width: 40%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    top: 233px;
+    right: 333px;
   }
   p {
     font-family: "Roboto";

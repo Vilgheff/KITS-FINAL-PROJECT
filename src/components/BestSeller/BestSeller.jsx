@@ -49,6 +49,7 @@ export const BestSeller = () => {
             width="fit-content"
             height="fit-content"
             textColor=" rgba(0, 0, 0, 0.5)"
+            bgColor="transparent"
           >
             All products
           </Button>
@@ -56,6 +57,7 @@ export const BestSeller = () => {
             width="fit-content"
             height="fit-content"
             textColor=" rgba(0, 0, 0, 0.5)"
+            bgColor="transparent"
           >
             T-Shirt
           </Button>
@@ -63,6 +65,7 @@ export const BestSeller = () => {
             width="fit-content"
             height="fit-content"
             textColor=" rgba(0, 0, 0, 0.5)"
+            bgColor="transparent"
           >
             hoodies
           </Button>
@@ -70,6 +73,7 @@ export const BestSeller = () => {
             width="fit-content"
             height="fit-content"
             textColor=" rgba(0, 0, 0, 0.5)"
+            bgColor="transparent"
           >
             jacket
           </Button>

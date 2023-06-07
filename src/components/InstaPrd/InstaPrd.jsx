@@ -30,11 +30,25 @@ const StyledInstaPrd = styled.div`
     flex: none;
     order: 0;
     flex-grow: 0;
+    margin: 0px 0px 60px 0px
   }
-  .itemgroup{
+  .itemgroup {
     display: flex;
     flex-direction: row;
     gap: 24px;
+  }
+  a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-transform: capitalize;
+    color: #ff6f61;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 70px;
   }
 `;
 export const InstaPrd = () => {
@@ -49,6 +63,7 @@ export const InstaPrd = () => {
         <InstaShowCase></InstaShowCase>
         <InstaShowCase></InstaShowCase>
       </div>
+      <a href="">@lisa.official</a>
     </StyledInstaPrd>
   );
 };

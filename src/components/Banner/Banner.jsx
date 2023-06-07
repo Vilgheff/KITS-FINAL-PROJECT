@@ -3,6 +3,7 @@ import bannerImg from "../../assets/Banner-Image.svg";
 import flowerPattern from "../../assets/flower-pattern-banner.svg";
 import shopIcon from "../../assets/banner-shopping-icon.svg";
 import { Button } from "components/Button";
+import { useMediaQuery } from "react-responsive";
 const StyledBanner = styled.div`
   display: flex;
   height: 847px;
@@ -48,7 +49,6 @@ const StyledBanner = styled.div`
     width: 45%;
     flex-direction: column;
     align-items: stretch;
-    
   }
   img {
     max-width: 100%;
@@ -59,30 +59,62 @@ const StyledBanner = styled.div`
     width: 30%;
     justify-content: center;
   }
+  @media screen and (max-width: 1224px) {
+    .left{
+      align-items: center;
+    }
+    span{
+      text-align: center;
+    }
+  }
 `;
 export const Banner = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
     <StyledBanner>
-      <div className="left">
-        <h2>Collections</h2>
-        <span>
-          you can explore ans shop many differnt collection from various barands
-          here.
-        </span>
-        <Button
-          icon={shopIcon}
-          bgColor="#1E2832"
-          textColor="white"
-          borderRadius="0px"
-          width="223px"
-          height="72px"
-        >
-          shop now
-        </Button>
-      </div>
-      <div className="right">
-        <img src={bannerImg} alt="" />
-      </div>
+      {isTabletOrMobile && (
+        <div className="left">
+          <h2>Collections</h2>
+          <span>
+            you can explore ans shop many differnt collection from various
+            barands here.
+          </span>
+          <Button
+            icon={shopIcon}
+            bgColor="#1E2832"
+            textColor="white"
+            borderRadius="0px"
+            width="223px"
+            height="72px"
+          >
+            shop now
+          </Button>
+        </div>
+      )}
+      {!isTabletOrMobile && (
+        <>
+          <div className="left">
+            <h2>Collections</h2>
+            <span>
+              you can explore ans shop many differnt collection from various
+              barands here.
+            </span>
+            <Button
+              icon={shopIcon}
+              bgColor="#1E2832"
+              textColor="white"
+              borderRadius="0px"
+              width="223px"
+              height="72px"
+            >
+              shop now
+            </Button>
+          </div>
+          <div className="right">
+            <img src={bannerImg} alt="" />
+          </div>
+        </>
+      )}
     </StyledBanner>
   );
 };

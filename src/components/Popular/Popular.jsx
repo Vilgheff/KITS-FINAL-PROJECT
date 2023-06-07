@@ -52,6 +52,9 @@ export const Popular = () => {
         bgSize="auto"
         isHot={true}
         isSale={true}
+        type="Manto"
+        quantity={86}
+        isShowCase={true}
       ></ShowCase>
       <div className="showcasesmol">
         <div className="showcasesmol-left">
@@ -60,6 +63,9 @@ export const Popular = () => {
             width="100%"
             height="auto"
             bgSize="cover"
+            type="Manto"
+            quantity={86}
+            isShowCase={true}
           ></ShowCase>
           <ShowCase
             imgSrc={ShowCaseImg}
@@ -67,6 +73,9 @@ export const Popular = () => {
             height="auto"
             bgSize="cover"
             isHot={true}
+            type="Manto"
+            quantity={86}
+            isShowCase={true}
           ></ShowCase>
         </div>
         <div className="showcasesmol-right">
@@ -76,12 +85,18 @@ export const Popular = () => {
             height="auto"
             bgSize="cover"
             isSale={true}
+            type="Manto"
+            quantity={86}
+            isShowCase={true}
           ></ShowCase>
           <ShowCase
             imgSrc={ShowCaseImg}
             width="100%"
             height="auto"
             bgSize="cover"
+            type="Manto"
+            quantity={86}
+            isShowCase={true}
           ></ShowCase>
         </div>
       </div>

@@ -11,6 +11,10 @@ const StyledBrand = styled.div`
   justify-content: center;
   margin: 90px 0px;
   gap: 80px;
+  img{
+    width: auto;
+    height: auto;
+  }
 `;
 export const Brand = () => {
   return (
