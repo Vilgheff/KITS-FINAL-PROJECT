@@ -2,6 +2,7 @@ import { ShowCase } from "components/ShowCase";
 import styled from "styled-components";
 import ShowCaseImg from "../../assets/image-category-1.svg";
 import { useShowCaseStore } from "store";
+import { Button } from "components/Button";
 const StylePopular = styled.div`
   position: relative;
   width: 70%;
@@ -48,10 +49,23 @@ export const Popular = () => {
     addShowCase: state.addShowCase,
   }));
   console.log(showcaseStore);
-  
+
   return (
     <StylePopular>
       <div className="text-rotated">Explore new and popular styles</div>
+      {/* <Button
+        onClick={() => {
+          addShowCase({
+            imgsrc: "../../assets/ItemCategory3.svg",
+            type: "Madsafnto",
+            quantity: 86,
+            ishot: true,
+            issale: false,
+          });
+        }}
+      >
+        add
+      </Button> */}
       <ShowCase
         imgSrc={ShowCaseImg}
         width="52%"

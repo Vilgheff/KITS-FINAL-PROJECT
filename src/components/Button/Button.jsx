@@ -37,6 +37,7 @@ export const Button = ({
   fontSize,
   marginright,
   icon,
+  onClick,
   children,
   ...rest
 }) => {
@@ -53,6 +54,7 @@ export const Button = ({
       fontSize={fontSize}
       icon={icon}
       marginright={marginright}
+      onClick={onClick}
     >
       <img src={icon} alt="" />
       {children}
