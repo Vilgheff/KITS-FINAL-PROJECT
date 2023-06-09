@@ -1,7 +1,7 @@
 import { ShowCase } from "components/ShowCase";
 import styled from "styled-components";
 import ShowCaseImg from "../../assets/image-category-1.svg";
-import { setListShowCase, useShowCaseStore } from "store/useShowCaseStore";
+import { useShowCaseStore } from "store";
 const StylePopular = styled.div`
   position: relative;
   width: 70%;
@@ -43,8 +43,12 @@ const StylePopular = styled.div`
   }
 `;
 export const Popular = () => {
-  const showcaseStore = useShowCaseStore();
+  const showcaseStore = useShowCaseStore((state) => state.listShowCase);
+  const { addShowCase } = useShowCaseStore((state) => ({
+    addShowCase: state.addShowCase,
+  }));
   console.log(showcaseStore);
+  
   return (
     <StylePopular>
       <div className="text-rotated">Explore new and popular styles</div>

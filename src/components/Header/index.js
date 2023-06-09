@@ -1,2 +1,3 @@
 import { Header } from "./Header";
-export { Header };
+import { AdminHeader } from "./AdminHeader";
+export { Header, AdminHeader };

@@ -1,2 +1,3 @@
 import { LayoutManager } from "./LayoutManager";
-export { LayoutManager }
+import { AdminLayout } from "./AdminLayout";
+export { LayoutManager, AdminLayout }

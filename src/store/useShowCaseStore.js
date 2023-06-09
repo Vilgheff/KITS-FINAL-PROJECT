@@ -38,8 +38,7 @@ const data = [
   },
 ];
 export const useShowCaseStore = create((set) => ({
-  listShowCase: [],
-  setListShowCase: (o) => {
-    set(produce((draft) => draft.listShowCase.push({ data })));
-  },
+  listShowCase: data,
+  addShowCase: (showcase) =>
+    set((state) => ({ listShowCase: [...state.listShowCase, showcase] })),
 }));
