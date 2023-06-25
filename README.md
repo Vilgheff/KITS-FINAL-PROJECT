@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Design: https://www.figma.com/file/k0IqSMbA2JgOzOSNvirlDQ/KITS-FINAL-PROJECT?type=design&node-id=0-1&mode=design&t=JR3QEZIvkHRRfPQ6-0
+Design: [Lisa Store Design].(https://www.figma.com/file/k0IqSMbA2JgOzOSNvirlDQ/KITS-FINAL-PROJECT?type=design&node-id=0-1&mode=design&t=JR3QEZIvkHRRfPQ6-0).
 
 ## Available Scripts
 
